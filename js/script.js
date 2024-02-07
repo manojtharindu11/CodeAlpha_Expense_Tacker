@@ -33,6 +33,9 @@ function updateTotal() {
   income.textContent = formatter.format(incomeTotal);
   expense.textContent = formatter.format(expenseTotal * -1);
   balance.textContent = formatter.format(balanceTotal);
+
+  updateChart(incomeTotal,expenseTotal);
+
 }
 
 // Function to render the transaction list

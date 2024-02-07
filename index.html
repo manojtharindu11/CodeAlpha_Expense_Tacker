@@ -5,68 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <h1>Expense Tracker</h1>
 
-    <main>
-        <header>
-            <div>
-                <h5>Total Balance</h5>
-                <span id="balance">LKR 0.00</span>
-            </div>
-            <div>
-                <h5>Income</h5>
-                <span id="income">LKR 0.00</span>
-            </div>
-            <div>
-                <h5>Expense</h5>
-                <span id="expense">LKR 0.00</span>
-            </div>
-
-        </header>
-
-        <section>
-            <h3>Transaction</h3>
-            <ul id="transactionList"></ul>
-            <div id="status"></div>
-        </section>
+    <div class="container">
 
 
-        <section>
-            <h3>Add Transaction</h3>
-
-            <form id="form">
+        <main>
+            <header>
                 <div>
-                    <label for="type">
-                        <input type="checkbox" name="type" id="type">
-                    <div class="option">
-                        <span>Expense</span>
-                        <span>Income</span>
+                    <h5>Total Balance</h5>
+                    <span id="balance">LKR 0.00</span>
+                </div>
+                <div>
+                    <h5>Income</h5>
+                    <span id="income">LKR 0.00</span>
+                </div>
+                <div>
+                    <h5>Expense</h5>
+                    <span id="expense">LKR 0.00</span>
+                </div>
+
+            </header>
+
+            <section>
+                <h3>Transaction</h3>
+                <ul id="transactionList"></ul>
+                <div id="status"></div>
+            </section>
+
+
+            <section>
+                <h3>Add Transaction</h3>
+
+                <form id="form">
+                    <div>
+                        <label for="type">
+                            <input type="checkbox" name="type" id="type">
+                            <div class="option">
+                                <span>Expense</span>
+                                <span>Income</span>
+                            </div>
+                        </label>
+
                     </div>
-                </label>
+                    <div>
+                        <input type="number" name="id" hidden>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div>
+                        <label for="amount">Amount</label>
+                        <input type="number" name="amount" value="0" min="0.01" step="0.01" required>
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <button type="submit" name="button" id="button">Add</button>
+                </form>
+            </section>
+        </main>
+        <div class="chart">
+            <h5>Income</h5>
+            <canvas class="canvas"></canvas>
+            <h5>Expense</h5>
+        </div>
+    </div>
+    <script src="js/chart.js"></script>
 
-                </div>
-                <div>
-                    <input type="number" name="id" hidden>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
-                <div>
-                    <label for="amount">Amount</label>
-                    <input type="number" name="amount" value="0" min="0.01" step="0.01" required>
-                </div>
-                <div>
-                    <label for="date">Date</label>
-                    <input type="date" name="date" required>
-                </div>
-                <button type="submit" name="button" id="button">Add</button>
-            </form>
-        </section>
-    </main>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
