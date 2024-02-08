@@ -1,7 +1,6 @@
 const chart = document.querySelector(".chart");
 const canvas = document.querySelector(".canvas");
 
-
 canvas.width = 400;
 canvas.height = 400;
 
@@ -34,5 +33,4 @@ function drawCircle(color, ratio, anticlockWise) {
   );
 
   ctx.stroke();
-
 }
