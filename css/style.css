@@ -23,6 +23,7 @@ body {
 .container {
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
 }
 
 h1 {
@@ -38,7 +39,8 @@ ul {
 
 main {
     flex-basis: 50%;
-    margin: 1rem;
+    margin: auto auto;
+    margin-right: 30px;
     background-color: #fff;
     padding: 1rem;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -242,11 +244,14 @@ ul li:hover .action {
 
 .chart {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-basis: 50%;
     margin: 1rem;
     background-color: #fff;
     padding: 1rem;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    max-height: 600px;
+    margin: auto auto;
 }
+

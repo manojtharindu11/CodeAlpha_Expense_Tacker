@@ -21,6 +21,7 @@ function updateChart(income, outcome) {
 
 function drawCircle(color, ratio, anticlockWise) {
   ctx.strokeStyle = color;
+  ctx.lineWidth = 20;
   ctx.beginPath();
 
   ctx.arc(
@@ -33,4 +34,5 @@ function drawCircle(color, ratio, anticlockWise) {
   );
 
   ctx.stroke();
+
 }
